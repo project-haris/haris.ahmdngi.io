@@ -3,12 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Haris | Maritime Intelligence at the Edge</title>
+    <title>Haris | Maritime Security Edge Platform for Vessel Monitoring and SOC Integration</title>
     <meta
         name="description"
-        content="Haris turns vessel telemetry into operational maritime intelligence with secure edge collection, onboard processing, and controlled delivery to the MSOC."
+        content="Haris is a maritime security edge platform for vessel monitoring, NMEA data collection, onboard processing, secure transmission, and SOC or MSOC integration."
     >
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="author" content="Ahmed Naji">
+    <meta name="application-name" content="Haris">
     <meta name="theme-color" content="#07151f">
+    <link rel="canonical" href="https://haris.ahmdngi.io/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Haris">
+    <meta property="og:title" content="Haris | Maritime Security Edge Platform for Vessel Monitoring and SOC Integration">
+    <meta property="og:description" content="Secure vessel-side collection and processing for NMEA telemetry, system health monitoring, and SOC-ready maritime intelligence workflows.">
+    <meta property="og:url" content="https://haris.ahmdngi.io/">
+    <meta property="og:image" content="https://haris.ahmdngi.io/logo.svg">
+    <meta property="og:image:type" content="image/svg+xml">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Haris | Maritime Security Edge Platform for Vessel Monitoring and SOC Integration">
+    <meta name="twitter:description" content="Secure vessel-side collection and processing for NMEA telemetry, system health monitoring, and SOC-ready maritime intelligence workflows.">
+    <meta name="twitter:image" content="https://haris.ahmdngi.io/logo.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -17,6 +32,96 @@
     >
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "WebSite",
+                    "name": "Haris",
+                    "url": "https://haris.ahmdngi.io/",
+                    "description": "Maritime security edge platform for vessel monitoring, onboard processing, secure transmission, and SOC integration."
+                },
+                {
+                    "@type": "SoftwareApplication",
+                    "name": "Haris",
+                    "applicationCategory": "SecurityApplication",
+                    "operatingSystem": "Linux",
+                    "url": "https://haris.ahmdngi.io/",
+                    "description": "Haris is a vessel-side maritime security platform that collects NMEA data, monitors edge node health, processes telemetry onboard, and supports secure integration with SOC and MSOC environments.",
+                    "featureList": [
+                        "NMEA 0183 and NMEA 2000 data collection",
+                        "Signal K ingestion and normalization",
+                        "Edge processing and buffering",
+                        "Secure transmission over protected transport paths",
+                        "Health monitoring and logging",
+                        "SOC and MSOC integration workflows"
+                    ]
+                },
+                {
+                    "@type": "FAQPage",
+                    "mainEntity": [
+                        {
+                            "@type": "Question",
+                            "name": "What exactly does Haris collect and process on the vessel?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Haris is designed to ingest vessel telemetry from NMEA 0183, NMEA 2000, and Signal K compatible sources. It can normalize those inputs on the edge device, monitor local system health, and prepare selected data for controlled transmission toward the operations center."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Why is Haris presented as a secure system?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "The security model does not rely on one feature alone. Haris combines encrypted transport, fail-closed firewall assumptions, service isolation, monitored device health, and operational controls around deployment and physical access. The goal is to reduce exposure both on the network side and on the device side."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "How does Haris stay useful if the vessel link is unstable or intermittent?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "The architecture is edge-first, which means collection and local processing happen on the vessel before any uplink is required. That allows the node to keep ingesting, buffering, and monitoring even when connectivity is degraded, then synchronize when a trusted path becomes available again."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Can Haris integrate with a Security Operations Center or MSOC workflow?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Yes. Haris is designed to support SOC and MSOC style operations by forwarding structured telemetry, logs, and health context into centralized monitoring environments. In practice, it can sit as the vessel-edge collection layer while central systems handle alerting, investigation, correlation, and longer-term analysis."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "What makes Haris suitable for integration with monitoring and logging stacks?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "The platform already reflects an observability-oriented design: structured collection paths, service-based deployment, health monitoring, and support for components such as Signal K, Filebeat, Logstash, Elasticsearch, and Kibana. That makes it easier to connect vessel-side telemetry with dashboards, retention pipelines, and SOC-facing workflows."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Is the system only about network security, or does it also consider physical compromise?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "It considers both. Haris is meant for deployed maritime hardware, so the security story includes enclosure controls, tamper-aware operating assumptions, restricted services, and careful deployment procedures in addition to encrypted communication and access control."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Why use an edge device instead of sending raw vessel data directly to the core environment?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Running Haris at the edge creates a cleaner trust boundary. It allows local parsing, filtering, normalization, buffering, and health checks before data is exposed to central systems. That reduces dependence on constant connectivity and gives operators a more controlled, auditable ingestion path into the SOC or MSOC environment."
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    </script>
 </head>
 <body>
     <div class="site-shell">
@@ -115,7 +220,7 @@
                 </div>
                 <div class="proof-card" data-reveal="up">
                     <span class="proof-value" data-count="4">0</span>
-                    <span class="proof-label">core layers from vessel sensor to MSOC delivery</span>
+                    <span class="proof-label">core layers from vessel sensor to M-SOC delivery</span>
                 </div>
                 <div class="proof-card" data-reveal="up">
                     <span class="proof-value" data-count="24">0</span>
@@ -202,7 +307,7 @@
                         <div class="diagram-step">
                             <span>4</span>
                             <div>
-                                <strong>MSOC visibility</strong>
+                                <strong>M-SOC visibility</strong>
                                 <p>Operators receive synchronized telemetry, logs, and operational context.</p>
                             </div>
                         </div>
@@ -301,10 +406,9 @@
                 <div class="quote-card" data-reveal="up">
                     <p class="quote-mark">"</p>
                     <p class="quote-text">
-                        Haris means guardian, and the site should feel like that too: calm under pressure,
-                        technically serious, and clear about what happens between sensors and operators.
+                        A ship in harbor is safe, but that is not what ships are built for.
                     </p>
-                    <p class="quote-meta">Design direction for this refresh</p>
+                    <p class="quote-meta">John A. Shedd</p>
                 </div>
             </section>
 
@@ -316,16 +420,32 @@
 
                 <div class="faq-list">
                     <details data-reveal="up">
-                        <summary>Is this still a static site?</summary>
-                        <p>Yes. It is now a structured static site with separated HTML, CSS, and JavaScript so it is easier to maintain and extend.</p>
+                        <summary>What exactly does Haris collect and process on the vessel?</summary>
+                        <p>Haris is designed to ingest vessel telemetry from NMEA 0183, NMEA 2000, and Signal K compatible sources. It can normalize those inputs on the edge device, monitor local system health, and prepare selected data for controlled transmission toward the operations center.</p>
                     </details>
                     <details data-reveal="up">
-                        <summary>Why not introduce a framework right away?</summary>
-                        <p>The current project only contained a simple static page. This refresh keeps deployment lightweight while making the site feel like a complete product website.</p>
+                        <summary>Why is Haris presented as a secure system?</summary>
+                        <p>The security model does not rely on one feature alone. Haris combines encrypted transport, fail-closed firewall assumptions, service isolation, monitored device health, and operational controls around deployment and physical access. The goal is to reduce exposure both on the network side and on the device side.</p>
                     </details>
                     <details data-reveal="up">
-                        <summary>Can this evolve into a larger marketing or documentation site later?</summary>
-                        <p>Yes. The new structure makes it straightforward to add more pages, assets, or a build step later without starting over.</p>
+                        <summary>How does Haris stay useful if the vessel link is unstable or intermittent?</summary>
+                        <p>The architecture is edge-first, which means collection and local processing happen on the vessel before any uplink is required. That allows the node to keep ingesting, buffering, and monitoring even when connectivity is degraded, then synchronize when a trusted path becomes available again.</p>
+                    </details>
+                    <details data-reveal="up">
+                        <summary>Can Haris integrate with a Security Operations Center or M-SOC workflow?</summary>
+                        <p>Yes. Haris is designed to support SOC and M-SOC style operations by forwarding structured telemetry, logs, and health context into centralized monitoring environments. In practice, it can sit as the vessel-edge collection layer while central systems handle alerting, investigation, correlation, and longer-term analysis.</p>
+                    </details>
+                    <details data-reveal="up">
+                        <summary>What makes Haris suitable for integration with monitoring and logging stacks?</summary>
+                        <p>The platform already reflects an observability-oriented design: structured collection paths, service-based deployment, health monitoring, and support for components such as Signal K, Filebeat, Logstash, Elasticsearch, and Kibana. That makes it easier to connect vessel-side telemetry with dashboards, retention pipelines, and M-SOC-facing workflows.</p>
+                    </details>
+                    <details data-reveal="up">
+                        <summary>Is the system only about network security, or does it also consider physical compromise?</summary>
+                        <p>It considers both. Haris is meant for deployed maritime hardware, so the security story includes enclosure controls, tamper-aware operating assumptions, restricted services, and careful deployment procedures in addition to encrypted communication and access control.</p>
+                    </details>
+                    <details data-reveal="up">
+                        <summary>Why use an edge device instead of sending raw vessel data directly to the core environment?</summary>
+                        <p>Running Haris at the edge creates a cleaner trust boundary. It allows local parsing, filtering, normalization, buffering, and health checks before data is exposed to central systems. That reduces dependence on constant connectivity and gives operators a more controlled, auditable ingestion path into the SOC or M-SOC environment.</p>
                     </details>
                 </div>
             </section>
@@ -333,16 +453,16 @@
             <section id="contact" class="section cta-band">
                 <div class="cta-copy" data-reveal="up">
                     <p class="eyebrow">Next step</p>
-                    <h2>Use this as the foundation for a real public-facing Haris presence.</h2>
+                    <h2>Deploy a vessel-edge platform that can feed secure maritime intelligence into the Maritime Security Operations Center (M-SOC).</h2>
                     <p>
-                        The site now presents the mission, architecture, deployment flow, and trust model
-                        in a way that feels intentional. It is ready for deeper content, screenshots,
-                        diagrams, or real case studies.
+                        Haris is designed to sit between vessel systems and central operations, collecting
+                        telemetry at the edge, protecting transport paths, and turning raw marine signals
+                        into operational context that can be monitored, investigated, and acted on.
                     </p>
                 </div>
                 <div class="cta-actions" data-reveal="left">
-                    <a class="button button-primary" href="https://github.com/ahmdngi/Marine_Haris">Explore the codebase</a>
-                    <a class="button button-secondary" href="https://github.com/ahmdngi/watchtower">Review automation</a>
+                    <a class="button button-primary" href="https://github.com/ahmdngi/Marine_Haris">Explore Marine_Haris</a>
+                    <a class="button button-secondary" href="https://github.com/ahmdngi/watchtower">Review Watchtower</a>
                 </div>
             </section>
         </main>
