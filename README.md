@@ -1,17 +1,20 @@
-# haris.ahmdngi.io
+# haris-zensical-docs
 
-Static marketing site for the Haris maritime edge platform.
+Docs-style rebuild of `haris.ahmdngi.io` inside the `project-haris` workspace.
 
 ## Structure
 
-- `index.html` - main site markup
-- `styles.css` - layout, theme, animations, and responsive styling
-- `script.js` - mobile navigation, reveal animations, and stat counters
-- `logo.svg` - main Haris brand mark based on the provided red-cloaked figure artwork
-- `favicon.svg` - simplified icon version of the same figure for browser tabs
+- `zensical.toml` - Zensical project configuration
+- `docs/` - markdown content for the Zensical site
+- `index.html` - single-page documentation site
+- `styles.css` - layout, visual system, responsive behavior, and docs styling
+- `script.js` - mobile sidebar toggle and active section highlighting
+- `logo.svg` - Haris brand mark reused from the original site
+- `favicon.svg` - browser icon
+- `CNAME` - domain mapping for `haris.ahmdngi.io`
 
 ## Notes
 
-- No build step is required.
-- Open `index.html` in a browser or serve the folder with any static file server.
-- The site is designed to be easy to expand into additional pages later.
+- Run `zensical serve` from this folder to preview the markdown docs site.
+- The static `index.html` version is also kept in place as a standalone no-build fallback.
+- The original `haris.ahmdngi.io` folder is left untouched; this folder is a docs-first recreation.
