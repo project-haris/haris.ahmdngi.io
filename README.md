@@ -1,20 +1,17 @@
 # haris-zensical-docs
 
-Docs-style rebuild of `haris.ahmdngi.io` inside the `project-haris` workspace.
+Zensical-backed documentation source for `haris.ahmdngi.io`.
 
 ## Structure
 
 - `zensical.toml` - Zensical project configuration
-- `docs/` - markdown content for the Zensical site
-- `index.html` - single-page documentation site
-- `styles.css` - layout, visual system, responsive behavior, and docs styling
-- `script.js` - mobile sidebar toggle and active section highlighting
-- `logo.svg` - Haris brand mark reused from the original site
-- `favicon.svg` - browser icon
-- `CNAME` - domain mapping for `haris.ahmdngi.io`
+- `docs/` - markdown source for the docs site
+- `CNAME` - custom domain mapping for `haris.ahmdngi.io`
+- `.github/workflows/deploy-pages.yml` - build and deploy workflow for GitHub Pages
 
 ## Notes
 
-- Run `zensical serve` from this folder to preview the markdown docs site.
-- The static `index.html` version is also kept in place as a standalone no-build fallback.
-- The original `haris.ahmdngi.io` folder is left untouched; this folder is a docs-first recreation.
+- Run `zensical serve` from this folder to preview the docs source locally.
+- Run `zensical build` to generate `site/` locally when needed.
+- The generated `site/` directory is intentionally ignored in git.
+- GitHub Pages should publish the built Zensical output, not a separate hand-written root `index.html`.
