@@ -34,10 +34,13 @@ jobs:
 
       - name: Build site
         run: |
+          rm -rf site
           zensical build
 
       - name: Prepare Pages artifact
         run: |
+          rm -rf site/.cache
+          rm -f site/.gitignore site/requirements.txt site/shell.nix site/zensical.toml
           cp CNAME site/CNAME
           touch site/.nojekyll
 

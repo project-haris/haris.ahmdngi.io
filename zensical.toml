@@ -2,17 +2,17 @@
 site_name = "Haris Docs"
 site_url = "https://haris.ahmdngi.io/"
 site_description = "Documentation-first reference for the Haris maritime edge intelligence platform."
-docs_dir = "."
+docs_dir = "docs"
 repo_url = "https://github.com/ahmdngi/marine_haris"
-extra_css = ["docs/stylesheets/extra.css"]
-extra_javascript = ["docs/javascripts/extra.js"]
+extra_css = ["stylesheets/extra.css"]
+extra_javascript = ["javascripts/extra.js"]
 nav = [
   {"Overview" = "index.md"},
-  {"Architecture" = "docs/architecture.md"},
-  {"Deployment" = "docs/deployment.md"},
-  {"Security" = "docs/security.md"},
-  {"Repos" = "docs/repos.md"},
-  {"FAQ" = "docs/faq.md"},
+  {"Architecture" = "architecture.md"},
+  {"Deployment" = "deployment.md"},
+  {"Security" = "security.md"},
+  {"Repos" = "repos.md"},
+  {"FAQ" = "faq.md"},
 ]
 
 [project.theme]
