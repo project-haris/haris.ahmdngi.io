@@ -12,6 +12,10 @@ permissions:
   pages: write
   id-token: write
 
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -31,6 +35,11 @@ jobs:
       - name: Build site
         run: |
           zensical build
+
+      - name: Prepare Pages artifact
+        run: |
+          cp CNAME site/CNAME
+          touch site/.nojekyll
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
