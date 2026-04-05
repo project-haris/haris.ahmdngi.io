@@ -1,3 +1,5 @@
+# Haris Docs
+
 <div class="hero-shell">
   <div class="hero-kicker">Platform documentation</div>
   <h1>Haris Docs</h1>
